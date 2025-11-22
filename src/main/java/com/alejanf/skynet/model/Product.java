@@ -12,7 +12,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -34,10 +36,13 @@ public class Product {
 
     @NotNull
     @PositiveOrZero
-    private Integer stock;
+    private Integer stockTotal;     //Hay que actualizar el padre cada vesz que actualicemos al hijo
 
     @NotBlank
     private String categoryId; // Referencia al id de la categoría
+
+
+    private List<String> variantIds = new ArrayList<>();
 
     private String imageUrl;
 

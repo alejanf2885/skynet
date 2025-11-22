@@ -14,6 +14,9 @@ public class OrderProduct {
     private String productId;
 
     @NotNull
+    private String variantId;
+
+    @NotNull
     private String productName;
 
     @NotNull
